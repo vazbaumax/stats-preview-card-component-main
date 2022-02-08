@@ -1,0 +1,188 @@
+/* Fonts imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* Color Variables */
+:root {
+  --very-dark-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--very-dark-blue);
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  color: var(--white);
+}
+
+/* Custom CSS for Mobile */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 375px;
+}
+
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-desaturated-blue);
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.stats-card-header_image-container {
+  position: relative;
+}
+
+.stats-card-header_image-container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: hsl(277, 66%, 35%);
+  opacity: 0.5;
+  filter: contrast(220%) brightness(110%);
+}
+
+.stats-card-header_image {
+  max-width: 100%;
+}
+
+.texts {
+  padding: 20px;
+}
+
+.texts-title {
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.accent {
+  color: var(--soft-violet);
+}
+
+.texts-excerpt {
+  font-weight: 400;
+  line-height: 27px;
+  padding: 10px;
+  color: var(--slightly-transparent-white-headings);
+}
+
+.stats-card-footer {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.stats-card-footer_list {
+  list-style: none;
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+
+.stats-card-footer_list-item {
+  margin-bottom: 50px;
+}
+
+.stats-label {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-family: "Lexend Deca";
+  letter-spacing: 2px;
+  color: var(--slightly-transparent-white-headings);
+}
+
+/* Custom CSS for Desktop */
+@media only screen and (min-width: 891px) {
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    min-width: 1116px;
+  }
+
+  .stats-card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1116px;
+    height: 450px;
+    align-items: flex-start;
+    overflow: hidden;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+
+  .stats-card-header_image-container {
+    width: 546px;
+  }
+
+  .stats-card-header_image {
+    content: url("/stats-preview-card-component-main/images/image-header-desktop.jpg");
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .texts-title {
+    text-align: left;
+    width: 370px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+  }
+
+  .texts-excerpt {
+    width: 386px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+  }
+
+  .stats-card-footer_list {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .stats-card-footer {
+    width: 350px;
+    padding-top: 10px;
+    margin-left: 50px;
+  }
+}
+
+/* FrontEnd Mentor Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
