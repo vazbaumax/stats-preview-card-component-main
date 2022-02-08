@@ -138,7 +138,7 @@ body {
 
   .stats-card-header_image {
     content: url("https://raw.githubusercontent.com/vazbaumax/stats-preview-card-component-main/master/images/image-header-desktop.jpg");
-    width: 100%;
+    width: fit-content;
     height: 450px;
   }
 
