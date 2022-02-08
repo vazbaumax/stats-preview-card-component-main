@@ -138,6 +138,7 @@ body {
 
   .stats-card-header_image {
     content: url("/stats-preview-card-component-main/images/image-header-desktop.jpg");
+    width: 100%;
   }
 
   .texts {
